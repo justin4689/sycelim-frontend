@@ -6,4 +6,9 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  preview: {
+    port: process.env.PORT,
+    host: true,
+    allowedHosts: ['sycelim-frontend.onrender.com'],
+  },
 })
