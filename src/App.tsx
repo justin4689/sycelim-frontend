@@ -13,7 +13,7 @@ import { Toaster } from 'sonner';
 function App() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center">
-      <img src="/src/assets/logo.jpeg" className="w-20 h-20 rounded-full" alt="" />
+      <img src="/logo.jpeg" className="w-20 h-20 rounded-full" alt="" />
       <h1 className="text-4xl font-bold mb-6 ">Sycelim Delivery</h1>
 
       <Router>

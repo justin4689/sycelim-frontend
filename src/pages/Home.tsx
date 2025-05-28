@@ -22,7 +22,7 @@ export default function Home({ onLogin, onRegister }: { onLogin: () => void; onR
     }
   }, [navigate]);
   return (
-    <div className="min-h-screen w-full flex flex-col justify-between bg-gradient-to-br from-orange-100 via-blue-100 to-white animate-fadein md:bg-[url('/src/assets/home.jpeg')]">
+    <div className="min-h-screen w-full flex flex-col justify-between bg-gradient-to-br from-orange-100 via-blue-100 to-white animate-fadein md:bg-[url('/home.jpeg')]">
       <div className="flex-1 flex items-start justify-center">
         <style>{`
           .animate-fadein {

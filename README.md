@@ -50,9 +50,14 @@ http://localhost:5173
 
 ## 🏠 Aperçu de l’interface
 
-![Aperçu de la page d’accueil](src/assets/home1.png)
+![Aperçu de la page d’accueil](/home1.png)
 
 ---
+ADMIN LOGIN
+
+email : jessica.doe@email.com
+password : motdepasse123
+
 
 ## 📦 Structure du projet
 

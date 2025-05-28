@@ -111,6 +111,7 @@ const LivreurPage = () => {
           pageSize={pageSize}
           total={total}
           onPageChange={setPage}
+          readOnlyStatus={true}
         />
       )}
       <DeliveryModal

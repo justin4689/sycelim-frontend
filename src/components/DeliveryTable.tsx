@@ -20,10 +20,14 @@ interface DeliveryTableProps {
   onPageChange: (page: number) => void;
   actions?: (delivery: Delivery) => React.ReactNode;
   onChangeStatus?: (id: string, newStatus: string) => Promise<void> | void;
+  /**
+   * Si true, le statut est affiché en lecture seule (texte), sinon menu déroulant
+   */
+  readOnlyStatus?: boolean;
 }
 
 // Composant principal du tableau de livraisons
-const DeliveryTable: React.FC<DeliveryTableProps> = ({ deliveries, page, pageSize, total, onPageChange, actions, onChangeStatus }) => {
+const DeliveryTable: React.FC<DeliveryTableProps> = ({ deliveries, page, pageSize, total, onPageChange, actions, onChangeStatus, readOnlyStatus = false }) => {
   const totalPages = Math.ceil(total / pageSize);
 
   return (
@@ -54,14 +58,18 @@ const DeliveryTable: React.FC<DeliveryTableProps> = ({ deliveries, page, pageSiz
                 <td className="px-4 py-2">{delivery.adresse}</td>
                 {/* Sélecteur de statut interactif */}
                 <td className="px-4 py-2">
-                  <StatusSelect
-                    value={delivery.statut}
-                    onChange={async (newStatus: string) => {
-                      if (typeof onChangeStatus === "function") {
-                        await onChangeStatus(delivery.id, newStatus);
-                      }
-                    }}
-                  />
+                  {readOnlyStatus ? (
+                    <span>{delivery.statut}</span>
+                  ) : (
+                    <StatusSelect
+                      value={delivery.statut}
+                      onChange={async (newStatus: string) => {
+                        if (typeof onChangeStatus === "function") {
+                          await onChangeStatus(delivery.id, newStatus);
+                        }
+                      }}
+                    />
+                  )}
                 </td>
                 <td className="px-4 py-2">{delivery.date}</td>
                 {/* Affichage conditionnel du livreur et des actions */}
