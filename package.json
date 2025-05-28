@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "start": "vite preview --port $PORT"
+    "start": "vite preview --host --port $PORT"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
