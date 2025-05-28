@@ -1,13 +1,71 @@
-# React + Vite
+# Sycelim Delivery - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenue sur l’application de gestion de livraisons **Sycelim Delivery** !
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Installation et lancement de l’application
 
-## Expanding the ESLint configuration
+1. **Cloner le dépôt**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# sycelim-frontend
+```bash
+# Avec git
+ git clone <url-du-repo>
+ cd sycelimdelivery-frontend
+```
+
+2. **Installer les dépendances**
+
+```bash
+npm install
+```
+
+3. **Configurer les variables d’environnement**
+
+- Copiez le fichier `.env.example` en `.env` et adaptez l’URL de l’API si besoin :
+
+```bash
+cp .env.example .env
+```
+
+- Par défaut :
+```
+VITE_API_URL=http://localhost:5000/api
+```
+
+4. **Lancer l’application en développement**
+
+```bash
+npm run dev
+```
+
+5. **Accéder à l’application**
+
+Ouvrez votre navigateur à l’adresse :
+```
+http://localhost:5173
+```
+
+---
+
+## 🏠 Aperçu de l’interface
+
+![Aperçu de la page d’accueil](src/assets/home1.png)
+
+---
+
+## 📦 Structure du projet
+
+- `src/pages/` : Pages principales (Home, Admin, Livreur, Login, Register)
+- `src/components/` : Composants réutilisables (Tableaux, Footer, etc.)
+- `src/assets/` : Images et icônes
+
+---
+
+## ❓ Besoin d’aide ?
+
+Contactez l’équipe Sycelim : support@sycelim.com
+
+---
+
+> Application réalisée avec React, Vite, TailwindCSS.
